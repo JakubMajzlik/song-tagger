@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="585.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.jakubmajzlik.songtagger.main.WindowController">
+   <children>
+      <Label fx:id="titleLabel" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutY="20.0" prefHeight="26.0" prefWidth="384.0" text="Title of song" textAlignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="titleField" layoutX="190.0" layoutY="261.0" />
+      <TextField fx:id="artistField" layoutX="190.0" layoutY="319.0" />
+      <TextField fx:id="albumField" layoutX="190.0" layoutY="382.0" />
+      <TextField fx:id="yearField" layoutX="190.0" layoutY="444.0" />
+      <TextField fx:id="genreField" layoutX="190.0" layoutY="500.0" />
+      <ImageView fx:id="albumCover" fitHeight="152.0" fitWidth="176.0" layoutX="104.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="52.0" layoutY="261.0" text="Title">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="319.0" text="Artist">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="382.0" text="Album">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="444.0" text="Year">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="500.0" text="Genre">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button onAction="#saveSongTags" layoutX="313.0" layoutY="546.0" mnemonicParsing="false" text="Save" />
+   </children>
+</AnchorPane>
