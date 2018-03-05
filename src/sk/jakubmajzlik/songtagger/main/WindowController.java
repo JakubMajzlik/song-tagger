@@ -78,7 +78,14 @@ public class WindowController implements Initializable{
 	@FXML
 	private void saveSongTags(ActionEvent event) {
 		try {
+			//Getting tags from fields and sevaing to audiofile
 			tags.setField(FieldKey.TITLE, titleField.getText());
+			tags.setField(FieldKey.ALBUM, albumField.getText());
+			tags.setField(FieldKey.ARTIST, artistField.getText());
+			tags.setField(FieldKey.YEAR, yearField.getText());
+			tags.setField(FieldKey.GENRE, genreField.getText());
+			
+			//Commiting changes
 			file.commit();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
