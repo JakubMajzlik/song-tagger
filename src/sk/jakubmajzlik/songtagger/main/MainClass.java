@@ -52,7 +52,7 @@ public class MainClass extends Application {
 					String filePath = file.getAbsolutePath();
 					try {
 						AudioFile audioFile = AudioFileIO.read(new File(filePath));
-						Tag tags = audioFile.getTag();								
+						Tag tags = audioFile.getTag();											
 						WindowController controller = loader.getController();
 						
 						//Setting controller
@@ -66,9 +66,13 @@ public class MainClass extends Application {
 						controller.getArtistField().setText(tags.getFirst(FieldKey.ARTIST));
 						controller.getGenreField().setText(tags.getFirst(FieldKey.GENRE));
 						controller.getYearField().setText(tags.getFirst(FieldKey.YEAR));						
-						Image cover = SwingFXUtils.toFXImage((BufferedImage) tags.getFirstArtwork().getImage(), null);
-						controller.getAlbumCover().setImage(cover);
 						
+						//Check if artwork exists
+						if(tags.getFirstArtwork() != null) {
+							Image cover = SwingFXUtils.toFXImage((BufferedImage) tags.getFirstArtwork().getImage(), null);
+							controller.getAlbumCover().setImage(cover);
+						}
+							
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
