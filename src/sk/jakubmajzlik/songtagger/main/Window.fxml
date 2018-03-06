@@ -44,6 +44,7 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Button onAction="#saveSongTags" layoutX="313.0" layoutY="546.0" mnemonicParsing="false" text="Save" />
+      <Button layoutX="313.0" layoutY="546.0" mnemonicParsing="false" onAction="#saveSongTags" text="Save" />
+      <Button layoutX="297.0" layoutY="208.0" mnemonicParsing="false" onAction="#changeCover" text="Change" />
    </children>
 </AnchorPane>
