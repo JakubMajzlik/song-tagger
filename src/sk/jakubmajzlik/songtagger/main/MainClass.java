@@ -71,6 +71,8 @@ public class MainClass extends Application {
 						if(tags.getFirstArtwork() != null) {
 							Image cover = SwingFXUtils.toFXImage((BufferedImage) tags.getFirstArtwork().getImage(), null);
 							controller.getAlbumCover().setImage(cover);
+						} else {
+							controller.getAlbumCover().setImage(null);
 						}
 							
 					} catch (Exception e) {
