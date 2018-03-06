@@ -55,10 +55,15 @@ public class MainClass extends Application {
 						Tag tags = audioFile.getTag();											
 						WindowController controller = loader.getController();
 						
+						if(tags == null) {
+							tags = audioFile.createDefaultTag();
+							audioFile.setTag(tags);
+						}
+						
 						//Setting controller
 						controller.setFile(audioFile);
 						controller.setTags(tags);
-						
+
 						//Setting UI fields with the song tags
 						controller.getTitleLabel().setText(tags.getFirst(FieldKey.TITLE));
 						controller.getTitleField().setText(tags.getFirst(FieldKey.TITLE));

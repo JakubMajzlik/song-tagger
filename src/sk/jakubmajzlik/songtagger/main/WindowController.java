@@ -114,7 +114,8 @@ public class WindowController implements Initializable{
 	@FXML
 	private void saveSongTags(ActionEvent event) {
 		try {
-			//Getting tags from fields and sevaing to audiofile
+			//TODO: sometimes get error: Field null is not of type AbstractID3v2Frame nor AggregatedFrame -> tags.setField(FieldKey.YEAR, "");
+			//Getting tags from fields and savaing to audiofile
 			tags.setField(FieldKey.TITLE, titleField.getText());
 			tags.setField(FieldKey.ALBUM, albumField.getText());
 			tags.setField(FieldKey.ARTIST, artistField.getText());
